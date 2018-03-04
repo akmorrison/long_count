@@ -1,0 +1,435 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:microchip_pic18mcu
+LIBS:switches
+LIBS:long_count-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 5
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L CC56-12 AFF1
+U 1 1 5A984FDC
+P 5725 3525
+AR Path="/5A9ADB4B/5A984FDC" Ref="AFF1"  Part="1" 
+AR Path="/5A99E2A4/5A984FDC" Ref="AFF2"  Part="1" 
+AR Path="/5A99F3E7/5A984FDC" Ref="AFF3"  Part="1" 
+AR Path="/5A99F3F5/5A984FDC" Ref="AFF4"  Part="1" 
+F 0 "AFF4" H 5725 4275 50  0000 C CNN
+F 1 "CC56-12" H 5725 4175 50  0000 C CNN
+F 2 "Displays_7-Segment:CA56-12SYKWA" H 5225 3525 50  0001 C CNN
+F 3 "" H 5225 3525 50  0001 C CNN
+	1    5725 3525
+	1    0    0    1   
+$EndComp
+Text HLabel 5825 4750 0    60   Input ~ 0
+DIG_3
+Text HLabel 7150 4750 0    60   Input ~ 0
+DIG_4
+Wire Wire Line
+	3725 4550 3725 4225
+Wire Wire Line
+	3725 4225 5025 4225
+Wire Wire Line
+	5100 4550 5100 4225
+Wire Wire Line
+	5100 4225 5525 4225
+Wire Wire Line
+	6025 4225 6425 4225
+Wire Wire Line
+	6425 4225 6425 4550
+Wire Wire Line
+	6525 4225 7750 4225
+Wire Wire Line
+	7750 4225 7750 4550
+Text HLabel 4500 4750 0    60   Input ~ 0
+DIG_2
+Wire Wire Line
+	5250 2400 5425 2400
+Wire Wire Line
+	5425 2400 5425 2825
+Wire Wire Line
+	5250 2225 5525 2225
+Wire Wire Line
+	5525 2225 5525 2825
+Wire Wire Line
+	5250 2050 5625 2050
+Wire Wire Line
+	5625 2050 5625 2825
+Wire Wire Line
+	5250 1875 5725 1875
+Wire Wire Line
+	5725 1875 5725 2825
+Wire Wire Line
+	5250 1700 5825 1700
+Wire Wire Line
+	5825 1700 5825 2825
+Wire Wire Line
+	5250 1525 5925 1525
+Wire Wire Line
+	5925 1525 5925 2825
+Wire Wire Line
+	5250 1350 6025 1350
+Wire Wire Line
+	6025 1350 6025 2825
+Wire Wire Line
+	5250 1175 6125 1175
+Wire Wire Line
+	6125 1175 6125 2825
+$Comp
+L GND #PWR020
+U 1 1 5A986B66
+P 3725 4950
+AR Path="/5A9ADB4B/5A986B66" Ref="#PWR020"  Part="1" 
+AR Path="/5A99E2A4/5A986B66" Ref="#PWR024"  Part="1" 
+AR Path="/5A99F3E7/5A986B66" Ref="#PWR032"  Part="1" 
+AR Path="/5A99F3F5/5A986B66" Ref="#PWR028"  Part="1" 
+F 0 "#PWR028" H 3725 4700 50  0001 C CNN
+F 1 "GND" H 3725 4800 50  0000 C CNN
+F 2 "" H 3725 4950 50  0001 C CNN
+F 3 "" H 3725 4950 50  0001 C CNN
+	1    3725 4950
+	1    0    0    -1  
+$EndComp
+Text HLabel 3125 4750 0    60   Input ~ 0
+DIG_1
+$Comp
+L R R30
+U 1 1 5A9F5B1C
+P 3275 4750
+AR Path="/5A9ADB4B/5A9F5B1C" Ref="R30"  Part="1" 
+AR Path="/5A99E2A4/5A9F5B1C" Ref="R46"  Part="1" 
+AR Path="/5A99F3E7/5A9F5B1C" Ref="R62"  Part="1" 
+AR Path="/5A99F3F5/5A9F5B1C" Ref="R78"  Part="1" 
+F 0 "R78" V 3355 4750 50  0000 C CNN
+F 1 "1K" V 3275 4750 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 3205 4750 50  0001 C CNN
+F 3 "" H 3275 4750 50  0001 C CNN
+	1    3275 4750
+	0    1    1    0   
+$EndComp
+$Comp
+L R R32
+U 1 1 5A9F5B9D
+P 4650 4750
+AR Path="/5A9ADB4B/5A9F5B9D" Ref="R32"  Part="1" 
+AR Path="/5A99E2A4/5A9F5B9D" Ref="R48"  Part="1" 
+AR Path="/5A99F3E7/5A9F5B9D" Ref="R64"  Part="1" 
+AR Path="/5A99F3F5/5A9F5B9D" Ref="R80"  Part="1" 
+F 0 "R80" V 4730 4750 50  0000 C CNN
+F 1 "1K" V 4650 4750 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 4580 4750 50  0001 C CNN
+F 3 "" H 4650 4750 50  0001 C CNN
+	1    4650 4750
+	0    1    1    0   
+$EndComp
+$Comp
+L R R42
+U 1 1 5A9F5BEE
+P 5975 4750
+AR Path="/5A9ADB4B/5A9F5BEE" Ref="R42"  Part="1" 
+AR Path="/5A99E2A4/5A9F5BEE" Ref="R58"  Part="1" 
+AR Path="/5A99F3E7/5A9F5BEE" Ref="R74"  Part="1" 
+AR Path="/5A99F3F5/5A9F5BEE" Ref="R90"  Part="1" 
+F 0 "R90" V 6055 4750 50  0000 C CNN
+F 1 "1K" V 5975 4750 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 5905 4750 50  0001 C CNN
+F 3 "" H 5975 4750 50  0001 C CNN
+	1    5975 4750
+	0    1    1    0   
+$EndComp
+$Comp
+L R R44
+U 1 1 5A9F5C40
+P 7300 4750
+AR Path="/5A9ADB4B/5A9F5C40" Ref="R44"  Part="1" 
+AR Path="/5A99E2A4/5A9F5C40" Ref="R60"  Part="1" 
+AR Path="/5A99F3E7/5A9F5C40" Ref="R76"  Part="1" 
+AR Path="/5A99F3F5/5A9F5C40" Ref="R92"  Part="1" 
+F 0 "R92" V 7380 4750 50  0000 C CNN
+F 1 "1K" V 7300 4750 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 7230 4750 50  0001 C CNN
+F 3 "" H 7300 4750 50  0001 C CNN
+	1    7300 4750
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR021
+U 1 1 5A9F63AA
+P 5100 4950
+AR Path="/5A9ADB4B/5A9F63AA" Ref="#PWR021"  Part="1" 
+AR Path="/5A99E2A4/5A9F63AA" Ref="#PWR025"  Part="1" 
+AR Path="/5A99F3E7/5A9F63AA" Ref="#PWR033"  Part="1" 
+AR Path="/5A99F3F5/5A9F63AA" Ref="#PWR029"  Part="1" 
+F 0 "#PWR029" H 5100 4700 50  0001 C CNN
+F 1 "GND" H 5100 4800 50  0000 C CNN
+F 2 "" H 5100 4950 50  0001 C CNN
+F 3 "" H 5100 4950 50  0001 C CNN
+	1    5100 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR022
+U 1 1 5A9F63F4
+P 6425 4950
+AR Path="/5A9ADB4B/5A9F63F4" Ref="#PWR022"  Part="1" 
+AR Path="/5A99E2A4/5A9F63F4" Ref="#PWR026"  Part="1" 
+AR Path="/5A99F3E7/5A9F63F4" Ref="#PWR034"  Part="1" 
+AR Path="/5A99F3F5/5A9F63F4" Ref="#PWR030"  Part="1" 
+F 0 "#PWR030" H 6425 4700 50  0001 C CNN
+F 1 "GND" H 6425 4800 50  0000 C CNN
+F 2 "" H 6425 4950 50  0001 C CNN
+F 3 "" H 6425 4950 50  0001 C CNN
+	1    6425 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR023
+U 1 1 5A9F643E
+P 7750 4950
+AR Path="/5A9ADB4B/5A9F643E" Ref="#PWR023"  Part="1" 
+AR Path="/5A99E2A4/5A9F643E" Ref="#PWR027"  Part="1" 
+AR Path="/5A99F3E7/5A9F643E" Ref="#PWR035"  Part="1" 
+AR Path="/5A99F3F5/5A9F643E" Ref="#PWR031"  Part="1" 
+F 0 "#PWR031" H 7750 4700 50  0001 C CNN
+F 1 "GND" H 7750 4800 50  0000 C CNN
+F 2 "" H 7750 4950 50  0001 C CNN
+F 3 "" H 7750 4950 50  0001 C CNN
+	1    7750 4950
+	1    0    0    -1  
+$EndComp
+Text GLabel 4950 2400 0    60   Input ~ 0
+SEG_A
+Text GLabel 4950 2225 0    60   Input ~ 0
+SEG_B
+Text GLabel 4950 2050 0    60   Input ~ 0
+SEG_C
+Text GLabel 4950 1875 0    60   Input ~ 0
+SEG_D
+Text GLabel 4950 1700 0    60   Input ~ 0
+SEG_E
+Text GLabel 4950 1525 0    60   Input ~ 0
+SEG_F
+Text GLabel 4950 1350 0    60   Input ~ 0
+SEG_G
+Text GLabel 4950 1175 0    60   Input ~ 0
+SEG_DP
+$Comp
+L R R51
+U 1 1 5A9D031E
+P 5100 2400
+AR Path="/5A99E2A4/5A9D031E" Ref="R51"  Part="1" 
+AR Path="/5A9ADB4B/5A9D031E" Ref="R39"  Part="1" 
+AR Path="/5A99F3F5/5A9D031E" Ref="R61"  Part="1" 
+AR Path="/5A99F3E7/5A9D031E" Ref="R71"  Part="1" 
+F 0 "R61" V 5180 2400 50  0000 C CNN
+F 1 "330" V 5100 2400 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 5030 2400 50  0001 C CNN
+F 3 "" H 5100 2400 50  0001 C CNN
+	1    5100 2400
+	0    1    1    0   
+$EndComp
+$Comp
+L R R50
+U 1 1 5A9D03F9
+P 5100 2225
+AR Path="/5A99E2A4/5A9D03F9" Ref="R50"  Part="1" 
+AR Path="/5A9ADB4B/5A9D03F9" Ref="R38"  Part="1" 
+AR Path="/5A99F3F5/5A9D03F9" Ref="R59"  Part="1" 
+AR Path="/5A99F3E7/5A9D03F9" Ref="R70"  Part="1" 
+F 0 "R59" V 5180 2225 50  0000 C CNN
+F 1 "330" V 5100 2225 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 5030 2225 50  0001 C CNN
+F 3 "" H 5100 2225 50  0001 C CNN
+	1    5100 2225
+	0    1    1    0   
+$EndComp
+$Comp
+L R R49
+U 1 1 5A9D042E
+P 5100 2050
+AR Path="/5A99E2A4/5A9D042E" Ref="R49"  Part="1" 
+AR Path="/5A9ADB4B/5A9D042E" Ref="R37"  Part="1" 
+AR Path="/5A99F3F5/5A9D042E" Ref="R57"  Part="1" 
+AR Path="/5A99F3E7/5A9D042E" Ref="R69"  Part="1" 
+F 0 "R57" V 5180 2050 50  0000 C CNN
+F 1 "330" V 5100 2050 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 5030 2050 50  0001 C CNN
+F 3 "" H 5100 2050 50  0001 C CNN
+	1    5100 2050
+	0    1    1    0   
+$EndComp
+$Comp
+L R R47
+U 1 1 5A9D0462
+P 5100 1875
+AR Path="/5A99E2A4/5A9D0462" Ref="R47"  Part="1" 
+AR Path="/5A9ADB4B/5A9D0462" Ref="R36"  Part="1" 
+AR Path="/5A99F3F5/5A9D0462" Ref="R56"  Part="1" 
+AR Path="/5A99F3E7/5A9D0462" Ref="R68"  Part="1" 
+F 0 "R56" V 5180 1875 50  0000 C CNN
+F 1 "330" V 5100 1875 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 5030 1875 50  0001 C CNN
+F 3 "" H 5100 1875 50  0001 C CNN
+	1    5100 1875
+	0    1    1    0   
+$EndComp
+$Comp
+L R R45
+U 1 1 5A9D04F9
+P 5100 1700
+AR Path="/5A99E2A4/5A9D04F9" Ref="R45"  Part="1" 
+AR Path="/5A9ADB4B/5A9D04F9" Ref="R35"  Part="1" 
+AR Path="/5A99F3F5/5A9D04F9" Ref="R55"  Part="1" 
+AR Path="/5A99F3E7/5A9D04F9" Ref="R67"  Part="1" 
+F 0 "R55" V 5180 1700 50  0000 C CNN
+F 1 "330" V 5100 1700 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 5030 1700 50  0001 C CNN
+F 3 "" H 5100 1700 50  0001 C CNN
+	1    5100 1700
+	0    1    1    0   
+$EndComp
+$Comp
+L R R43
+U 1 1 5A9D053A
+P 5100 1525
+AR Path="/5A99E2A4/5A9D053A" Ref="R43"  Part="1" 
+AR Path="/5A9ADB4B/5A9D053A" Ref="R34"  Part="1" 
+AR Path="/5A99F3F5/5A9D053A" Ref="R54"  Part="1" 
+AR Path="/5A99F3E7/5A9D053A" Ref="R66"  Part="1" 
+F 0 "R54" V 5180 1525 50  0000 C CNN
+F 1 "330" V 5100 1525 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 5030 1525 50  0001 C CNN
+F 3 "" H 5100 1525 50  0001 C CNN
+	1    5100 1525
+	0    1    1    0   
+$EndComp
+$Comp
+L R R41
+U 1 1 5A9D057C
+P 5100 1350
+AR Path="/5A99E2A4/5A9D057C" Ref="R41"  Part="1" 
+AR Path="/5A9ADB4B/5A9D057C" Ref="R33"  Part="1" 
+AR Path="/5A99F3F5/5A9D057C" Ref="R53"  Part="1" 
+AR Path="/5A99F3E7/5A9D057C" Ref="R65"  Part="1" 
+F 0 "R53" V 5180 1350 50  0000 C CNN
+F 1 "330" V 5100 1350 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 5030 1350 50  0001 C CNN
+F 3 "" H 5100 1350 50  0001 C CNN
+	1    5100 1350
+	0    1    1    0   
+$EndComp
+$Comp
+L R R31
+U 1 1 5A9D05C1
+P 5100 1175
+AR Path="/5A9ADB4B/5A9D05C1" Ref="R31"  Part="1" 
+AR Path="/5A99E2A4/5A9D05C1" Ref="R40"  Part="1" 
+AR Path="/5A99F3F5/5A9D05C1" Ref="R52"  Part="1" 
+AR Path="/5A99F3E7/5A9D05C1" Ref="R63"  Part="1" 
+F 0 "R52" V 5180 1175 50  0000 C CNN
+F 1 "330" V 5100 1175 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 5030 1175 50  0001 C CNN
+F 3 "" H 5100 1175 50  0001 C CNN
+	1    5100 1175
+	0    1    1    0   
+$EndComp
+$Comp
+L Q_PNP_BEC Q1
+U 1 1 5A9E12C4
+P 3625 4750
+AR Path="/5A9ADB4B/5A9E12C4" Ref="Q1"  Part="1" 
+AR Path="/5A99E2A4/5A9E12C4" Ref="Q5"  Part="1" 
+AR Path="/5A99F3F5/5A9E12C4" Ref="Q9"  Part="1" 
+AR Path="/5A99F3E7/5A9E12C4" Ref="Q13"  Part="1" 
+F 0 "Q9" H 3825 4800 50  0000 L CNN
+F 1 "Q_PNP_BEC" H 3825 4700 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23_Handsoldering" H 3825 4850 50  0001 C CNN
+F 3 "" H 3625 4750 50  0001 C CNN
+	1    3625 4750
+	1    0    0    1   
+$EndComp
+$Comp
+L Q_PNP_BEC Q2
+U 1 1 5A9E1366
+P 5000 4750
+AR Path="/5A9ADB4B/5A9E1366" Ref="Q2"  Part="1" 
+AR Path="/5A99E2A4/5A9E1366" Ref="Q6"  Part="1" 
+AR Path="/5A99F3F5/5A9E1366" Ref="Q10"  Part="1" 
+AR Path="/5A99F3E7/5A9E1366" Ref="Q14"  Part="1" 
+F 0 "Q10" H 5200 4800 50  0000 L CNN
+F 1 "Q_PNP_BEC" H 5200 4700 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23_Handsoldering" H 5200 4850 50  0001 C CNN
+F 3 "" H 5000 4750 50  0001 C CNN
+	1    5000 4750
+	1    0    0    1   
+$EndComp
+$Comp
+L Q_PNP_BEC Q3
+U 1 1 5A9E13AE
+P 6325 4750
+AR Path="/5A9ADB4B/5A9E13AE" Ref="Q3"  Part="1" 
+AR Path="/5A99E2A4/5A9E13AE" Ref="Q7"  Part="1" 
+AR Path="/5A99F3F5/5A9E13AE" Ref="Q11"  Part="1" 
+AR Path="/5A99F3E7/5A9E13AE" Ref="Q15"  Part="1" 
+F 0 "Q11" H 6525 4800 50  0000 L CNN
+F 1 "Q_PNP_BEC" H 6525 4700 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23_Handsoldering" H 6525 4850 50  0001 C CNN
+F 3 "" H 6325 4750 50  0001 C CNN
+	1    6325 4750
+	1    0    0    1   
+$EndComp
+$Comp
+L Q_PNP_BEC Q4
+U 1 1 5A9E13FE
+P 7650 4750
+AR Path="/5A9ADB4B/5A9E13FE" Ref="Q4"  Part="1" 
+AR Path="/5A99E2A4/5A9E13FE" Ref="Q8"  Part="1" 
+AR Path="/5A99F3F5/5A9E13FE" Ref="Q12"  Part="1" 
+AR Path="/5A99F3E7/5A9E13FE" Ref="Q16"  Part="1" 
+F 0 "Q12" H 7850 4800 50  0000 L CNN
+F 1 "Q_PNP_BEC" H 7850 4700 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23_Handsoldering" H 7850 4850 50  0001 C CNN
+F 3 "" H 7650 4750 50  0001 C CNN
+	1    7650 4750
+	1    0    0    1   
+$EndComp
+$EndSCHEMATC
