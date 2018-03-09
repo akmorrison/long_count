@@ -1,0 +1,33 @@
+Part 	| Digikey no 	| Other part no 	| Datasheet
+---------------------------------------------------------
+Microcontroller 	| N/A 	| PIC18F27k40 	|
+VREG 	| NCP7805TGOS-ND 	| NCP7805TGO 	| http://www.onsemi.com/pub/Collateral/NCP7800-D.PDF
+Decoder 	| 296-24352-1-ND 	| CD74HC154M96 	| http://www.ti.com/lit/ds/symlink/cd74hc154.pdf
+Socket 	| ED3050-5-ND 	| ED281DT 	| https://media.digikey.com/pdf/Data%20Sheets/On%20Shore%20PDFs/EDXXXDT_Dwg.pdf
+Barrel socket 	| CP-037A-ND 	| PJ-037A 	| https://www.cui.com/product/resource/digikeypdf/pj-037a.pdf
+Barrel plug 	| CP3-1000-ND 	| PP3-002A 	| https://www.cui.com/product/resource/digikeypdf/pp3-002a.pdf
+Button 	| CKN9112CT-ND	| 	|
+Rotary Encoder 	| 987-1399-ND	| 	|
+Seven segment 	| aliexpress part	| 	|
+12MHz osc 	| 887-1238-ND	| 9B-12.000MEEJ-B	| 
+32.678KHz osc 	| not on v1	| 	|
+Header pin 	| 929974E-01-06-ND	|	|
+fuse holder 	| F4225-ND	|	|
+LEDs 	| 732-503{0,2}-1-ND	|	|
+PNP's               | MMBTA92LT1GOSCT-ND|
+
+
+
+Resistors : 
+1k on each base drive (4*4 = 16)
+330 on each Segment (8*4)
+330 on each LED (2) = (34)
+5 10k pull resistors
+22 0ohms
+
+Caps:
+.1uF bypass on Vin
+4 caps for the two oscillators (two not used because ignoring low frequency
+oscillator)
+caps for the VREG
+
