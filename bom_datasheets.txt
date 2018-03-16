@@ -1,6 +1,6 @@
 Part 	| Digikey no 	| Other part no 	| Datasheet
 ---------------------------------------------------------
-Microcontroller 	| N/A 	| PIC18F27k40 	|
+Microcontroller 	| N/A 	| PIC18F27k40 	| http://ww1.microchip.com/downloads/en/DeviceDoc/40001844D.pdf
 VREG 	| NCP7805TGOS-ND 	| NCP7805TGO 	| http://www.onsemi.com/pub/Collateral/NCP7800-D.PDF
 Decoder 	| 296-24352-1-ND 	| CD74HC154M96 	| http://www.ti.com/lit/ds/symlink/cd74hc154.pdf
 Socket 	| ED3050-5-ND 	| ED281DT 	| https://media.digikey.com/pdf/Data%20Sheets/On%20Shore%20PDFs/EDXXXDT_Dwg.pdf
