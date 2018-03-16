@@ -1,3 +1,5 @@
 *bak
 .DS_Store
 /firmware/nbproject/private/
+/firmware/build/default/
+/firmware/dist/default/

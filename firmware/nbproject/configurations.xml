@@ -18,6 +18,9 @@
                    projectFiles="false">
       <itemPath>Makefile</itemPath>
     </logicalFolder>
+    <itemPath>sevenseg.c</itemPath>
+    <itemPath>sevenseg.h</itemPath>
+    <itemPath>main.c</itemPath>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
