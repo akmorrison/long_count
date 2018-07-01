@@ -9,6 +9,7 @@
 #include <stdlib.h>
 #include "sevenseg.h"
 #include "configuration.h"
+#include "date_and_time.h"
 
 
 /*
@@ -20,8 +21,19 @@ volatile int outputs[16] = {
 0,0,0,0,
 0,0,0,0 };
 
+static enum {
+    COUNTUP,
+    COUNTDOWN,
+    FROZEN,
+    EDITING
+} fsm_state;
+
 int main(int argc, char** argv) {
     sevseg_init();
+
+    //why do I need to set this here? No idea man
+    fsm_state = COUNTUP;
+
     PIE0 = 0b00100000;
 
     INTCON= 0b11000000;
@@ -61,15 +73,12 @@ void interrupt isr (void)
         TMR0IF = 0;
         TMR0H = 0xFE;
         TMR0L = 0xC9;
-        for(int i = 0; i < 15; ++i)
-        {
-            outputs[i]++;
-            if(outputs[i] != 10)
-                return;
-            outputs[i] = 0;
+        if(fsm_state == COUNTDOWN) {
+            decrement_and_rollover(outputs, 0);
         }
-        if(outputs[15]++ == 10)
-            outputs[15] = 0;
+        else if(fsm_state == COUNTUP) {
+            increment_and_rollover(outputs, 0);
+        }
     }
     //we don't know what caused interrupt, so block
     else{
