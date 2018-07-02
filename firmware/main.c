@@ -10,6 +10,7 @@
 #include "sevenseg.h"
 #include "configuration.h"
 #include "date_and_time.h"
+#include "editing_fsm.h"
 #include "buttons.h"
 
 /*
@@ -39,6 +40,13 @@ int main(int argc, char** argv) {
     WPUC =   0b11000000;
     IOCCN =  0b11000000;
     IOCCP =  0b11000000;
+
+    //configure pins 6,5,&4 on port C as inputs with pullup
+    //these are the buttons, from top to bottom
+    TRISB |= 0b01110000;
+    ANSELB = 0b10001111;
+    WPUB   = 0b01110000;
+    IOCBN  = 0b01110000;
 
     //why do I need to set this here? No idea man
     fsm_state = EDITING;
@@ -90,6 +98,7 @@ void interrupt isr (void)
             increment_and_rollover(outputs, 0);
         }
         else if(fsm_state == EDITING) {
+            edit_state_during(outputs);
         }
     }
     else if(IOCIF){
@@ -98,15 +107,34 @@ void interrupt isr (void)
             //interrupt came from B channel of rotary encoder
             IOCCF7 = 0;
             if(fsm_state == EDITING)
-                handle_change_rot_b(outputs, 0);
+                handle_change_rot_b(outputs);
         } else if(IOCCF6) {
             //interrupt came from A channel of rotary encoder
             IOCCF6 = 0;
             if(fsm_state == EDITING)
-                handle_change_rot_a(outputs, 0);
+                handle_change_rot_a(outputs);
+        } else if(IOCBF6) {
+            IOCBF6 = 0;
+            //top button
+            if(fsm_state == EDITING)
+                edit_state_right_button_cb(outputs);
+        } else if(IOCBF5) {
+            IOCBF5 = 0;
+            //middle button
+            if(fsm_state == EDITING) {
+                edit_state_leave(outputs);
+                fsm_state = COUNTDOWN;
+            } else {
+                edit_state_enter(outputs);
+                fsm_state = EDITING;
+            }
+        } else if(IOCBF4) {
+            IOCBF4 = 0;
+            //bottom button
+            if(fsm_state == EDITING)
+                edit_state_left_button_cb(outputs);
         }
         IOCIF = 0;
-
     }
     //we don't know what caused interrupt, so block
     else{

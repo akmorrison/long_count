@@ -16,6 +16,8 @@
       <itemPath>date_and_time.h</itemPath>
       <itemPath>buttons.c</itemPath>
       <itemPath>buttons.h</itemPath>
+      <itemPath>editing_fsm.c</itemPath>
+      <itemPath>editing_fsm.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

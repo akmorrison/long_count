@@ -108,8 +108,8 @@ void sevseg_put_number(int digit, int display, int value){
             break;
 
         default:
-            LATA = 0x3f;
-            PORTB |= 0x3;
+            LATA = 0x0;
+            PORTB |= 0x0;
     }
     LATC = select;
     __delay_us(50);
