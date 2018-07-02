@@ -10,7 +10,7 @@
 #include "sevenseg.h"
 #include "configuration.h"
 #include "date_and_time.h"
-
+#include "buttons.h"
 
 /*
  *
@@ -31,10 +31,20 @@ static enum {
 int main(int argc, char** argv) {
     sevseg_init();
 
-    //why do I need to set this here? No idea man
-    fsm_state = COUNTUP;
+    //configure pins 7&6 on port c as inputs with pullup
+    //we do this for the rotary encoder
+    TRISCbits.TRISC6 = 1;
+    TRISCbits.TRISC7 = 1;
+    ANSELC = 0b00111111;
+    WPUC =   0b11000000;
+    IOCCN =  0b11000000;
+    IOCCP =  0b11000000;
 
-    PIE0 = 0b00100000;
+    //why do I need to set this here? No idea man
+    fsm_state = EDITING;
+
+    //allow timer and IOC interrupts
+    PIE0 = 0b00110000;
 
     INTCON= 0b11000000;
 
@@ -79,6 +89,24 @@ void interrupt isr (void)
         else if(fsm_state == COUNTUP) {
             increment_and_rollover(outputs, 0);
         }
+        else if(fsm_state == EDITING) {
+        }
+    }
+    else if(IOCIF){
+        //check what pin it was
+        if(IOCCF7) {
+            //interrupt came from B channel of rotary encoder
+            IOCCF7 = 0;
+            if(fsm_state == EDITING)
+                handle_change_rot_b(outputs, 0);
+        } else if(IOCCF6) {
+            //interrupt came from A channel of rotary encoder
+            IOCCF6 = 0;
+            if(fsm_state == EDITING)
+                handle_change_rot_a(outputs, 0);
+        }
+        IOCIF = 0;
+
     }
     //we don't know what caused interrupt, so block
     else{

@@ -14,6 +14,8 @@
                    projectFiles="true">
       <itemPath>date_and_time.c</itemPath>
       <itemPath>date_and_time.h</itemPath>
+      <itemPath>buttons.c</itemPath>
+      <itemPath>buttons.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
